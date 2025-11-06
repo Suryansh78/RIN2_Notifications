@@ -22,7 +22,7 @@ class Impersonate
                 $request->session()->forget('impersonate_user_id');
             }
         }
-
+        
         return $next($request);
     }
 }
