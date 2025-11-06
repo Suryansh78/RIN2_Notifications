@@ -1,0 +1,479 @@
+
+/* Global Layout & Colors */
+body { 
+    font-family: Inter, system-ui, Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: #f5f6f8; 
+    color: #222; 
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 32px auto; 
+    padding: 24px; 
+    background: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06); 
+}
+
+  /* Header */
+header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding-bottom: 16px; 
+    border-bottom: 1px solid #e5e5e5; 
+    margin-bottom: 20px; 
+    flex-wrap: nowrap; 
+}
+
+header h1 { 
+    margin: 0; 
+    font-size: 1.15rem; 
+    font-weight: 600; 
+}
+
+.muted { 
+    color: #6b7280; 
+    font-size: 0.88rem; 
+}
+
+  /* Navigation / Topbar */
+.topbar { 
+    display: flex; 
+    align-items: center; 
+    gap: 14px; 
+    white-space: nowrap; 
+    flex-wrap: nowrap; 
+}
+
+.topbar a { 
+    text-decoration: none; 
+    color: #0b5ed7; 
+    font-size: 0.95rem; 
+    font-weight: 500;
+    padding: 6px 8px;
+}
+
+.topbar a:hover { 
+    text-decoration: underline; 
+}
+
+  /* Notification Badge */
+.badge { 
+    background: #dc3545; 
+    color: white; 
+    border-radius: 999px; 
+    padding: 3px 8px; 
+    font-size: 0.75rem; 
+    font-weight: 600; 
+    display: inline-block; 
+  }
+
+  /* Dropdown Notification List */
+  .notif-list { 
+    width: 280px; 
+    background: white; 
+    border: 1px solid #e5e5e5; 
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); 
+    border-radius: 8px; 
+    padding: 8px; 
+    position: absolute; 
+    right: 0; 
+    z-index: 50; 
+  }
+
+  .notif-item { 
+    padding: 10px; 
+    border-bottom: 1px solid #f1f1f1; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+  .notif-item:last-child { border-bottom: none; }
+
+  /* Inline Form Style */
+  form.inline { display: inline; }
+
+  /* Success Message */
+  .alert-success { 
+    background: #e6ffed; 
+    border: 1px solid #b6f5c4; 
+    border-radius: 6px; 
+    padding: 10px 12px; 
+    margin-bottom: 14px; 
+    font-size: 0.95rem; 
+  }
+
+
+  /* Index page user */
+
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+  }
+
+  .users-table thead {
+    background: #f8f9fa;
+  }
+
+.users-table th {
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.users-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 0.92rem;
+    color: #444;
+}
+
+.users-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.btn-small {
+    padding: 6px 10px;
+    border: none;
+    background: #0b5ed7;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-small:hover {
+    background: #094db4;
+}
+
+.badge-unread {
+    background: #dc3545;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.settings-form h2 {
+    font-weight: 600;
+    color: #333;
+}
+
+.settings-form .card {
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+}
+
+.settings-form .form-label {
+    font-weight: 500;
+}
+
+.settings-form .btn-primary {
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.settings-form input.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, .2);
+}
+
+.notification-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.notif-trigger {
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.notif-badge {
+    background: #dc3545;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    padding: 2px 6px;
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+.notif-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 32px;
+    width: 280px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 10px;
+    z-index: 999;
+}
+
+.notif-menu.show {
+    display: block;
+}
+
+.notif-header {
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+}
+
+.notif-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.notif-item:last-child {
+    border-bottom: none;
+}
+
+.notif-content strong {
+    display: block;
+    font-size: 14px;
+}
+
+.notif-meta {
+    font-size: 12px;
+    color: #777;
+}
+
+.notif-item.read strong {
+    opacity: 0.6;
+}
+
+.notif-read {
+    font-size: 12px;
+    color: #999;
+}
+
+.notif-empty {
+    text-align: center;
+    padding: 10px 0;
+    color: #777;
+}
+
+.notif-footer {
+    text-align: center;
+    padding-top: 8px;
+    font-size: 14px;
+}
+
+span.notif-badge{margin-left: -8px;}
+
+  .form-card {
+    background: #ffffff;
+    padding: 20px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    max-width: 650px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333;
+    background: #fff;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #0b5ed7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11,94,215,0.15);
+  }
+
+  textarea {
+    min-height: 90px;
+    resize: vertical;
+  }
+
+  .btn-primary {
+    padding: 10px 16px;
+    background: #0b5ed7;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .btn-primary:hover {
+    background: #094db4;
+  }
+
+    .notif-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+  }
+
+  .notif-table thead {
+    background: #f8f9fa;
+  }
+
+  .notif-table th {
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #374151;
+  }
+
+  .notif-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 0.92rem;
+    color: #444;
+  }
+
+  .notif-table tbody tr:hover {
+    background: #f9fafb;
+    transition: 0.2s;
+  }
+
+  .notif-type-marketing { color: #0b5ed7; font-weight: 600; }
+  .notif-type-invoices { color: #16a34a; font-weight: 600; }
+  .notif-type-system { color: #dc2626; font-weight: 600; }
+
+  .notif-table a {
+    text-decoration: none;
+    color: #0b5ed7;
+  }
+
+  .notif-table a:hover {
+    text-decoration: underline;
+  }
+
+
+  .notif-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.notif-content {
+  flex: 1 1 auto;      /* allow text to grow AND shrink */
+  min-width: 0;         /* REQUIRED for wrapping in flexbox */
+  white-space: normal;  /* allow wrapping */
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.notif-item form {
+  flex-shrink: 0;       /* prevent the button from shrinking */
+}
+
+.notif-item .btn {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  white-space: nowrap;  /* keep button single-line */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-form {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.filter-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-row input,
+.filter-row select {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #9ca3af;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.table th, .table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-small {
+  padding: 4px 10px;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.no-data {
+  text-align: center;
+  padding: 16px;
+  color: #6b7280;
+  font-weight: 500;
+  background: #fafafa;
+}
